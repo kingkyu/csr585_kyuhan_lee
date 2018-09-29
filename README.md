@@ -27,7 +27,7 @@ The system was developed under the following versions of softwares and packages:
 
 ### A step-by-step "how to":
 #### (For an easy reproduction, we provide a link to the database containing processed data. If you download a sqlite3 db file from the link and place it in the same folder you put the files download from the repository, you will be able to reproduce the model only following step (1) and (6). In other words, you can skip step from (2) to (5).) 
-#### Link: 
+#### Link: https://drive.google.com/open?id=1kPfE6u4m3qZW28CCpmTErhQBnBsRdAQW
 
 (1) Download all the files in a local server.
 
