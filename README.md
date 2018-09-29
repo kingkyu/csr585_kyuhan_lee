@@ -17,17 +17,23 @@ The implementaion of the baseline model can be easily reproduced by downloading 
 The system was developed under the following versions of softwares and packages:
 
 Python==3.5.2
+
 numpy==1.14.5
+
 scipy==1.1.0
+
 sklearn==0.19.1
 
 
 ### A step-by-step "how to"
 (1) Download all the files in a local server.
+
 (2) Unzip "wikipedia2017.zip" and place unzipped files in the same directory where the files from the repository initially   
     downloaded.
+    
 (2) Execute "data_processing.py" which will create a sqlite3 db called "fever.db".
     This database contains indices of individual Wikipedia pages which facilitates their retrieval process.
+    
 (3) Execute "model.py" which prints out the outcomes and produces "result.txt" that compares gold classes of data points and   
     their predicted classes.
 
