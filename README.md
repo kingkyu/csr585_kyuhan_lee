@@ -31,10 +31,10 @@ The system was developed under the following versions of softwares and packages:
 (2) Unzip "wikipedia2017.zip" and place unzipped files in the same directory where the files from the repository initially   
     downloaded.
     
-(2) Execute "data_processing.py" which will create a sqlite3 db called "fever.db".
+(3) Execute "data_processing.py" which will create a sqlite3 db called "fever.db".
     This database contains indices of individual Wikipedia pages which facilitates their retrieval process.
     
-(3) Execute "model.py" which prints out the outcomes and produces "result.txt" that compares gold classes of data points and   
+(4) Execute "model.py" which prints out the outcomes and produces "result.txt" that compares gold classes of data points and   
     their predicted classes.
 
 ## References
