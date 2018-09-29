@@ -25,16 +25,23 @@ The system was developed under the following versions of softwares and packages:
 - sklearn==0.19.1
 
 
-### A step-by-step "how to"
+### A step-by-step "how to":
+#### (For an easy reproduction, we provide a link to the database containing processed data. If you download a sqlite3 db file from the link and place it in the same folder you put the files download from the repository, you will be able to reproduce the model only following step (1) and (6). In other words, you can skip step from (2) to (5).) 
+#### Link: 
+
 (1) Download all the files in a local server.
 
-(2) Unzip "wikipedia2017.zip" and place unzipped files in the same directory where the files from the repository initially   
-    downloaded.
+(2) Download Wikipedia dumps from the following URL: https://s3-eu-west-1.amazonaws.com/fever.public/wiki-pages.zip
     
-(3) Execute "data_processing.py" which will create a sqlite3 db called "fever.db".
+(3) Unzip the downloaded zip file and place the unzipped JSON files in the same directory where the files, downloaded from the 
+    repository, are located.
+    
+(4) Make sure you delete the first line of "wiki-001.jsonl", one of the unzipped files you will encounter.
+
+(5) Execute "data_processing.py" which will create a sqlite3 db called "fever.db".
     This database contains indices of individual Wikipedia pages which facilitates their retrieval process.
     
-(4) Execute "model.py" which prints out the outcomes and produces "result.txt" that compares gold classes of data points and   
+(6) Execute "model.py" which prints out the outcomes and produces "result.txt" that compares gold classes of data points and   
     their predicted classes.
 
 ## References
