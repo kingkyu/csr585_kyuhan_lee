@@ -16,13 +16,13 @@ The implementaion of the baseline model can be easily reproduced by downloading 
 
 The system was developed under the following versions of softwares and packages:
 
-Python==3.5.2
+- Python==3.5.2
 
-numpy==1.14.5
+- numpy==1.14.5
 
-scipy==1.1.0
+- scipy==1.1.0
 
-sklearn==0.19.1
+- sklearn==0.19.1
 
 
 ### A step-by-step "how to"
