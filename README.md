@@ -16,6 +16,8 @@ The implementaion of the baseline model can be easily reproduced by downloading 
 
 The system was developed under the following versions of softwares and packages:
 
+- sqlite3
+
 - Python==3.5.2
 
 - numpy==1.14.5
