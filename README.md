@@ -18,7 +18,7 @@ The system was developed under the following versions of softwares and packages:
 
 - sqlite3
 
-- Python==3.5.2
+- python==3.5.2
 
 - numpy==1.14.5
 
