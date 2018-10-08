@@ -43,8 +43,8 @@ The system was developed under the following versions of softwares and packages:
 (5) Execute "data_processing.py" which will create a sqlite3 db called "fever.db".
     This database contains indices of individual Wikipedia pages which facilitates their retrieval process.
     
-(6) Execute "model.py" which prints out the outcomes and produces "result.txt" that compares gold classes of data points and   
-    their predicted classes.
+(6) Execute "model.py" which prints out the outcomes and produces "result.txt" that compares gold classes of data points and their predicted classes.
+
 
 ## References
 - Riedel, B., Augenstein, I., Spithourakis, G. P., & Riedel, S. (2017). A simple but tough-to-beat baseline for the Fake News Challenge stance detection task. arXiv preprint arXiv:1707.03264.
