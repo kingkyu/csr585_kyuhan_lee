@@ -1,17 +1,17 @@
 # Large Scale Fact Checking Algorithm Using Entity-based Structural Balance 
 
 
-This repository contains materials for a large scale fact checking algorithm. The contents of the repository will very likely to expand as the research progresses. Currently, we, in this repository, present related data sets and the implementaion of baseline models and our initial model.
+This repository contains materials for a large scale fact checking algorithm. The contents of the repository will very likely to expand as the research progresses. Currently, we, in this repository, present related data sets and the implementaion of baselines and our model.
 
-To be specific, the repository includes a set of JSON files (i.e., "wiki-001.jsonl" - "wiki-109.jsonl") for June 2017 Wikipedia dump processed with Stanfor CoreNLP, training and test data files (i.e., "train.jsonl" and "test.jsonl"), a python file for indexing each Wikipedia page (i.e., "data_processing.py"), and multiple python files for the implementaion of the fact-checking models (i.e., "model.py").
+To be specific, the repository includes a set of JSON files (i.e., "wiki-001.jsonl" - "wiki-109.jsonl") for June 2017 Wikipedia dump processed with Stanfor CoreNLP, training and test data files (i.e., "train.jsonl" and "test.jsonl"), a python file for indexing each Wikipedia page (i.e., "data_processing.py"), and multiple python files for the implementaion of the fact-checking models from "1.Riedel.py" to "8.Word2VecMLP+NormSBT.py".
 
-The problem to be solved with contents in this repository is to verify whether a claim is "true", "false", or "neither true or false due to a lack of evidence". To elaborate, we validate whether a claim falls into one the three classes given documents that contain proper evidences for checking the veracity of the claim. For detailed description of the problem, please refer to Thorne et al. (2018). Note that while there are different models suggested in Thorne et al. (2018), we, in this repository, contains the implementation of the model of which results are presented in Table 5 of the paper.
+The problem to be solved with contents in this repository is to verify whether a claim is "true", "false", or "neither true or false due to a lack of evidence". To elaborate, we validate whether a claim falls into one the three classes given documents that contain proper evidences for checking the veracity of the claim.  
 
-The baseline model included in this repository uses TF and TF-IDF vectors of claims and their corresponding evidences as inputs for a multilayer perceptron algorithm and predicts the calims to belong to one of the three aforementioned classes. For a detailed explanation of the model, please refer to Riedel et al. (2017).
+The models included in this repository use various features including TF vectors, TF-IDF vectors, word vectors pretrained on OntoNotes (Weischedel et al., 2011), consine similiarities between vectors, and values derived from the structural balance theory. We train data with a multilayer perceptron algorithm and predict calims to belong to one of the three aforementioned classes. For detailed description on the problem and method, please refer to Thorne et al. (2018) or contact us via email (kyuhanlee0119@email.arizona.edu).
 
 ## Reproducibility
 
-The implementaion of the baseline model can be easily reproduced by downloading all the contents in a local server and executing "data_processing.py" and "model.py" in a sequence.
+To reproduce our results, follow "A step-by-step "how to"" below.
 
 ### Prerequisites
 
@@ -48,9 +48,10 @@ The system was developed under the following versions of softwares and packages:
     
 (6) Download a pretrained language model provided by Spacy. Enter "python -m spacy download en_core_web_lg" in your command line tool.
     
-(7) Execute "model.py" which prints out the outcomes and produces "result.txt" that compares gold classes of data points and their predicted classes.
+(7) Execute each model from "1.Riedel.py" to "8.Word2VecMLP+NormSBT.py which print out outcomes and produce corresponding ".txt" result file that contains gold classes of data points and their predicted classes.
 
 
 ## References
 - Riedel, B., Augenstein, I., Spithourakis, G. P., & Riedel, S. (2017). A simple but tough-to-beat baseline for the Fake News Challenge stance detection task. arXiv preprint arXiv:1707.03264.
 - Thorne, J., Vlachos, A., Christodoulopoulos, C., & Mittal, A. (2018). FEVER: a large-scale dataset for Fact Extraction and VERification. arXiv preprint arXiv:1803.05355.
+- Weischedel, R., Hovy, E., Marcus, M., Palmer, M.,Belvin, R., Pradhan, S., ... & Xue, N. (2011). OntoNotes: A large training corpus for enhanced processing. Handbook of Natural Language Processing and Machine Translation. Springer, 59.
